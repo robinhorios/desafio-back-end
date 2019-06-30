@@ -1,0 +1,2 @@
+class OperationDescription < ApplicationRecord
+end
