@@ -10,17 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_28_205848) do
+ActiveRecord::Schema.define(version: 2019_06_30_192641) do
 
-  create_table "cnabs", force: :cascade do |t|
-    t.integer "transaction_type"
+  create_table "operations", force: :cascade do |t|
+    t.integer "operation_type"
     t.date "date"
     t.integer "value"
     t.string "cpf"
     t.string "card"
     t.time "hour"
-    t.string "store_owner"
-    t.string "store_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "store_id"
+    t.index ["store_id"], name: "index_operations_on_store_id"
+  end
+
+  create_table "stores", force: :cascade do |t|
+    t.string "name"
+    t.string "owner"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

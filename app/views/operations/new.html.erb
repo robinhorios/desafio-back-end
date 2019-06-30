@@ -1,0 +1,14 @@
+<%= form_for @operation, url: operations_path do |f| %>
+	<div class="file-field input-field">
+    <div class="btn">
+      <span>Importar arquivo CNAB</span>
+      <%= f.file_field :file, class: 'form-control-file', required: true %>
+    </div>
+    <div class="file-path-wrapper">
+      <input class="file-path validate" type="text">
+    </div>
+  </div>
+
+   <%= f.submit 'Enviar', class: 'btn btn-primary' %>
+
+<% end %>

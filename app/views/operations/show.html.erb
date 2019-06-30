@@ -1,0 +1,29 @@
+<table>
+	<thead>
+		<tr>
+			<th>Tipo de transação</th>
+			<th>Data</th>
+			<th>Valor</th>
+			<th>CPF</th>
+			<th>Cartão</th>
+			<th>Hora</th>
+			<th>Dono(a) da loja</th>
+			<th>Nome da loja</th>
+		</tr>
+	</thead>		
+	<tbody>
+		<tr>
+			<td><%= @operation.operation_type %></td>
+			<td><%= @operation.date %></td>
+			<td><%= @operation.value %></td>
+			<td><%= @operation.cpf %></td>
+			<td><%= @operation.card %></td>
+			<td><%= @operation.hour %></td>
+			<td><%= @operation.store.owner %></td>
+			<td><%= @operation.store.name %></td>
+		</tr>	
+	</tbody>
+</table>
+
+
+
