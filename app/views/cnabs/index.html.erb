@@ -1,0 +1,32 @@
+
+<table>
+	<thead>
+		<tr>
+			<th>Tipo de transação</th>
+			<th>Data</th>
+			<th>Valor</th>
+			<th>CPF</th>
+			<th>Cartão</th>
+			<th>Hora</th>
+			<th>Dono(a) da loja</th>
+			<th>Nome da loja</th>
+		</tr>
+	</thead>		
+	<tbody>
+		<% Cnab.all.each do |cnab| %>
+		<tr>
+			<td><%= cnab.transaction_type %></td>
+			<td><%= cnab.date %></td>
+			<td><%= cnab.value %></td>
+			<td><%= cnab.cpf %></td>
+			<td><%= cnab.card %></td>
+			<td><%= cnab.hour %></td>
+			<td><%= cnab.store_owner %></td>
+			<td><%= cnab.store_name %></td>
+		</tr>	
+		<% end %>	
+	</tbody>
+</table>
+
+
+
