@@ -3,7 +3,9 @@ require 'csv'
 class Operation < ApplicationRecord
 	belongs_to :store
 
-	DECREASING_OPERATIONS = [2,9].freeze
+	def operation_description
+  	OperationDescription.find_by(operation_type: self.operation_type)
+  end
 
 	def self.import(file)
 		cnab_file = CSV.read(file.path)

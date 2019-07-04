@@ -1,0 +1,17 @@
+<header>
+	<nav>
+	  <div class="nav-wrapper">
+	    <ul id="nav-mobile" class="left hide-on-med-and-down">
+	      <li><%= link_to 'Operações', operations_path %></li>
+	      <li><%= link_to 'Lojas', stores_path %></li>
+	    </ul>
+	    <ul class="right">
+	      <% if user_signed_in? %>
+	      <li>
+	        <%= link_to('Sair', destroy_user_session_path, method: :delete) %>        
+	      </li>
+	      <% end %>
+	    </ul>
+	  </div>
+	</nav>  
+</header>

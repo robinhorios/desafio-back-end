@@ -1,12 +1,34 @@
 <% @stores.each do |store| %>
 <div class="col s6">
 	<div class="card blue-grey darken-1">
-    <div class="card-content white-text">
-      <span class="card-title"><%= store.name %></span>
-      <p><strong>Proprietário: <%= store.owner %></strong></p>
+    <div class="card-content card-header white-text">
+      <h2 class="card-title center"><%= store.name %></h2>
+      <p class="center"><strong>Proprietário(a): <%= store.owner %></strong></p>
     </div>
-    <div class="card-content">
-      <span>Operações financeiras</span>
+    <div class="card-content card-body">
+    	<h3 class="center">Operações financeiras</h3>
+     	<table class="">
+				<thead>
+					<tr>
+						<th>Descrição</th>
+						<th>Valor</th>
+					</tr>
+				</thead>		
+				<tbody>
+				<% store.operations.each do |operation| %>
+					<tr>
+						<td><%= operation.operation_description.description %></td>
+						<td><%= "#{operation.operation_description.signal}#{operation.value}" %></td>
+					</tr>	
+				<% end %>
+				</tbody>
+				<tfoot>
+       		<tr>
+          	<th scope="row">Total</th>
+          	<td><%= store.balance %></td>
+        	</tr>
+    		</tfoot>
+			</table>
     </div>
   </div>
 </div>
