@@ -5,7 +5,10 @@ DESAFIO-BACK-END is a project to evaluate skills as a back-end developer.
 
 ## Installation
 
-1. Get the project with the contact.
+1. Clone the project 
+```bash
+git clone git@github.com:robinhorios/desafio-back-end.git
+```
 2. Set the local version of ruby to 2.6.3 with rbenv or rvm.
 3. Run the follow code in the path folder:
 
