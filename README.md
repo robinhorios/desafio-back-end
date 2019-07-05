@@ -27,3 +27,11 @@ Run the follow code:
 ```python
 bundle exec rspec
 ```
+
+## CNAB file
+
+Import the CNAB.txt file in:
+
+```python
+spec/fixtures/files/CNAB.txt
+```
